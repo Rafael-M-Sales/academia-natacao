@@ -1,0 +1,16 @@
+.:root {
+  --color-primary: hsl(190, 80%, 45%);
+  --color-primary-dark: hsl(190, 80%, 35%);
+  --color-bg: hsl(210, 10%, 10%);
+  --color-surface: hsla(210, 10%, 15%, 0.8);
+  --color-text: hsl(0, 0%, 90%);
+  --radius: 0.75rem;
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
+  --transition: all 0.3s ease;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', system-ui, sans-serif;
+}

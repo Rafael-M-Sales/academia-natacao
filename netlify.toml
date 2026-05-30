@@ -1,0 +1,16 @@
+name = "academia-natacao"
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  VITE_DEMO_MODE = "true"
+  NODE_VERSION = "20"
+
+# Com API no Render: no painel Netlify defina VITE_API_URL e VITE_DEMO_MODE=false
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

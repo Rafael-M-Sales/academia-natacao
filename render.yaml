@@ -1,0 +1,24 @@
+# Hospede a API (com SQLite) em https://render.com — plano gratuito para demonstrações
+services:
+  - type: web
+    name: h2o-control-api
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@h2ocontrol.com
+      - key: ADMIN_PASSWORD
+        value: admin
+      - key: CLIENT_URL
+        sync: false
+      - key: DATABASE_PATH
+        value: /var/data/academia.db
+    disk:
+      name: h2o-sqlite
+      mountPath: /var/data
+      sizeGB: 1
